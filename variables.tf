@@ -53,3 +53,7 @@ variable "private_ip_address" {
   description = "Static Private IP"
   type        = string
 }
+
+variable "my_ip" {
+  type = string
+}
