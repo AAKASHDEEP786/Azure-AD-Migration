@@ -1,7 +1,7 @@
 resource "azurerm_windows_virtual_machine" "vm" {
   name                = var.vm_name
-  resource_group_name = var.resource_group_name
-  location            = var.location
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.rg.location
   size                = var.vm_size
   admin_username      = var.admin_username
   admin_password      = var.admin_password
@@ -26,8 +26,8 @@ resource "azurerm_windows_virtual_machine" "vm" {
 # Data Disk
 resource "azurerm_managed_disk" "data_disk" {
   name                 = "ad-datadisk"
-  location             = var.location
-  resource_group_name  = var.resource_group_name
+  location             = azurerm_resource_group.rg.location
+  resource_group_name  = azurerm_resource_group.rg.name
   storage_account_type = "Standard_LRS"
   create_option        = "Empty"
   disk_size_gb         = 32

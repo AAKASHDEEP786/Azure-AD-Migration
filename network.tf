@@ -20,16 +20,16 @@ resource "azurerm_subnet" "subnet" {
 # Public IP (for RDP - learning purpose)
 resource "azurerm_public_ip" "pip" {
   name                = "ad-pip"
-  location            = var.location
-  resource_group_name = var.resource_group_name
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
   allocation_method   = "Static"
 }
 
 # NSG
 resource "azurerm_network_security_group" "nsg" {
   name                = "ad-nsg"
-  location            = var.location
-  resource_group_name = var.resource_group_name
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
 
   security_rule {
     name                       = "RDP"
@@ -47,8 +47,8 @@ resource "azurerm_network_security_group" "nsg" {
 # NIC
 resource "azurerm_network_interface" "nic" {
   name                = "ad-nic"
-  location            = var.location
-  resource_group_name = var.resource_group_name
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
 
   ip_configuration {
     name                          = "internal"
