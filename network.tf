@@ -39,7 +39,7 @@ resource "azurerm_network_security_group" "nsg" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_range     = "3389"
-    source_address_prefix      = "${var.my_ip}/32"
+    source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
 }
@@ -50,7 +50,7 @@ resource "azurerm_network_interface" "nic" {
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 
-  dns_servers = ["10.0.1.4"]
+  dns_servers = ["10.0.1.4", "10.0.1.5"]
 
   ip_configuration {
     name                          = "internal"

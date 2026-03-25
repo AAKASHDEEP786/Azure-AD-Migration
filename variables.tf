@@ -54,6 +54,6 @@ variable "private_ip_address" {
   type        = string
 }
 
-variable "my_ip" {
-  type = string
-}
+# variable "my_ip" {
+#   type = string
+# }

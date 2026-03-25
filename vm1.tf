@@ -42,7 +42,7 @@ resource "azurerm_virtual_machine_data_disk_attachment" "disk_attach" {
   caching            = "ReadWrite"
 }
 
-# 🔥 AD Installation using Custom Script Extension (FINAL)
+# AD Installation using Custom Script Extension (FINAL)
 resource "azurerm_virtual_machine_extension" "ad_install" {
   name                 = "${var.vm_name}-ad-install"
   virtual_machine_id   = azurerm_windows_virtual_machine.vm.id
