@@ -42,7 +42,9 @@ resource "azurerm_virtual_machine_data_disk_attachment" "disk_attach" {
   caching            = "ReadWrite"
 }
 
-# AD Installation using Custom Script Extension (FINAL)
+# -----------------------------
+# AD Installation
+# -----------------------------
 resource "azurerm_virtual_machine_extension" "ad_install" {
   name                 = "${var.vm_name}-ad-install"
   virtual_machine_id   = azurerm_windows_virtual_machine.vm.id
@@ -52,7 +54,7 @@ resource "azurerm_virtual_machine_extension" "ad_install" {
 
   settings = <<SETTINGS
   {
-    "commandToExecute": "powershell -ExecutionPolicy Unrestricted -Command \"$script=[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('${filebase64("scripts/install-ad.ps1")}')); Set-Content -Path C:\\\\install-ad.ps1 -Value $script; powershell -ExecutionPolicy Unrestricted -File C:\\\\install-ad.ps1\""
+    "commandToExecute": "powershell -ExecutionPolicy Unrestricted -Command \"$script=[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('${filebase64("scripts/install-ad.ps1")}')); Set-Content -Path C:\\\\install.ps1 -Value $script; powershell -ExecutionPolicy Unrestricted -File C:\\\\install.ps1\""
   }
   SETTINGS
 }
