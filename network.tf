@@ -3,6 +3,7 @@ resource "azurerm_resource_group" "rg" {
   location = var.location
 }
 
+# Vnet and Subnet
 resource "azurerm_virtual_network" "vnet" {
   name                = var.vnet_name
   address_space       = var.address_space
