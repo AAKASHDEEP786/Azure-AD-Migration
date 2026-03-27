@@ -95,6 +95,10 @@ resource "azurerm_virtual_machine_extension" "target_ad_install" {
   type                 = "CustomScriptExtension"
   type_handler_version = "1.10"
 
+  depends_on = [
+    azurerm_virtual_machine_extension.ad_install
+  ]
+
   settings = <<SETTINGS
   {
     "commandToExecute": "powershell -ExecutionPolicy Unrestricted -Command \"$script=[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String('${filebase64("scripts/install-ad-target.ps1")}')); Set-Content -Path C:\\\\install-ad-target.ps1 -Value $script; powershell -ExecutionPolicy Unrestricted -File C:\\\\install-ad-target.ps1\""
