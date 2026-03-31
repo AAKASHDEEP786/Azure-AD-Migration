@@ -88,15 +88,23 @@ Real-world enterprise migration simulation
 ---
 
 ## ▶️ How to Run
-1. Initialize Terraform
-terraform init
-2. Validate Config
-terraform validate
-3. Plan Deployment
-terraform plan
-4. Apply Infrastructure
-terraform apply -auto-approve
 
+1. Initialize Terraform
+```bash
+terraform init
+```
+2. Validate Config
+```bash
+terraform validate
+```
+4. Plan Deployment
+```bash
+terraform plan
+```
+6. Apply Infrastructure
+```bash
+terraform apply -auto-approve
+```
 ---
 
 ## 🔐 Accessing the VMs
