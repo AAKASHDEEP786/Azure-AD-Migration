@@ -53,7 +53,8 @@ ad-migration/
 ```
 ---
 
-⚙️ What This Project Does
+## ⚙️ What This Project Does
+
 ✅ Infrastructure Provisioning
 Creates Azure resources using Terraform
 Configures networking with static IPs
