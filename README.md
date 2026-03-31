@@ -115,9 +115,10 @@ Use the output Public IPs to connect via RDP:
 Username: azureuser
 Password: Defined in terraform.tfvars
 
+
 ---
 
-## ⚠️ Security Note
+⚠️ Security Note
 RDP is open to all (0.0.0.0/0) for learning purposes
 
 👉 In production:
