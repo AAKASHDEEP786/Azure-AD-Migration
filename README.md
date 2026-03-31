@@ -59,11 +59,13 @@ ad-migration/
 Creates Azure resources using Terraform
 Configures networking with static IPs
 Enables RDP access via NSG
+
 ✅ Active Directory Setup
 Installs AD DS role automatically
 Promotes both VMs to Domain Controllers:
 source.local
 target.local
+
 ✅ DNS Configuration
 
 Source VM uses:
