@@ -110,9 +110,9 @@ terraform apply -auto-approve
 ## 🔐 Accessing the VMs
 
 After deployment:
-
+```bash
 terraform output
-
+```
 Use the output Public IPs to connect via RDP:
 
 Username: azureuser
@@ -134,3 +134,5 @@ Use Azure Bastion or VPN
 
 Aakash Deep
 DevOps | Cloud & Infrastructure Engineer
+
+🔗 LinkedIn: https://www.linkedin.com/in/aakash-deep-v16/
