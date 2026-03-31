@@ -87,20 +87,22 @@ This lab is useful for:
 
 ## ▶️ How to Run
 
-### 1. Initialize Terraform
+### 1. Terraform Commands
 ```bash
 terraform init
 
-### 2. Validate Config
+## 2. Validate Config
 ```bash
 terraform validate
 
-### 3. Plan Deployment
+## 3. Plan Deployment
 ```bash
 terraform plan
 
-### 4. Apply Infrastructure
+## 4. Apply Infrastructure
 terraform apply -auto-approve
+
+---
 
 ## 🔐 Accessing the VMs
 
@@ -113,6 +115,8 @@ Use the output Public IPs to connect via RDP:
 Username: azureuser
 Password: Defined in terraform.tfvars
 
+---
+
 ## ⚠️ Security Note
 RDP is open to all (0.0.0.0/0) for learning purposes
 
@@ -120,6 +124,8 @@ RDP is open to all (0.0.0.0/0) for learning purposes
 
 Restrict access using your IP
 Use Azure Bastion or VPN
+
+---
 
 ## 🙌 Author
 
