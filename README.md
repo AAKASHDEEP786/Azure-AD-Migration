@@ -50,10 +50,8 @@ ad-migration/
 └── scripts/
     ├── install-ad.ps1          # Source domain setup
     └── install-ad-target.ps1   # Target domain setup
-
+```
 ---
-
-
 
 ⚙️ What This Project Does
 ✅ Infrastructure Provisioning
