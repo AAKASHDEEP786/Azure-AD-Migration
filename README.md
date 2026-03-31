@@ -73,7 +73,10 @@ Source VM uses:
 Target VM uses Source DC as DNS:
 
 10.0.1.4
-🧪 Use Case
+
+---
+
+## 🧪 Use Case
 
 This lab is useful for:
 
@@ -81,7 +84,10 @@ Active Directory migration practice
 Learning ADMT (Active Directory Migration Tool)
 Hybrid identity concepts
 Real-world enterprise migration simulation
-▶️ How to Run
+
+---
+
+## ▶️ How to Run
 1. Initialize Terraform
 terraform init
 2. Validate Config
@@ -90,7 +96,10 @@ terraform validate
 terraform plan
 4. Apply Infrastructure
 terraform apply -auto-approve
-🔐 Accessing the VMs
+
+---
+
+## 🔐 Accessing the VMs
 
 After deployment:
 
@@ -100,14 +109,20 @@ Use the output Public IPs to connect via RDP:
 
 Username: azureuser
 Password: Defined in terraform.tfvars
-⚠️ Security Note
+
+---
+
+## ⚠️ Security Note
 RDP is open to all (0.0.0.0/0) for learning purposes
 
 👉 In production:
 
 Restrict access using your IP
 Use Azure Bastion or VPN
-🙌 Author
+
+---
+
+## 🙌 Author
 
 Aakash Deep
 DevOps | Cloud & Infrastructure Engineer
